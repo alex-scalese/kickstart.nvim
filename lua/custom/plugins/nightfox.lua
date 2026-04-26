@@ -11,5 +11,6 @@ return {
         styles = {},
       },
     }
+    vim.cmd.colorscheme 'dayfox'
   end,
 }
