@@ -639,6 +639,13 @@ require('lazy').setup({
             },
           },
         },
+        yamlls = {
+          settings = {
+            yaml = {
+              keyOrdering = false,
+            },
+          },
+        },
         -- pyright = {},
         -- rust_analyzer = {},
         --
