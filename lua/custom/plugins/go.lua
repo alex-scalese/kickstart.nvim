@@ -1,12 +1,13 @@
-return {
-  'ray-x/go.nvim',
-  dependencies = {
-    'ray-x/guihua.lua',
-    'neovim/nvim-lspconfig',
-    'nvim-treesitter/nvim-treesitter',
-  },
-  config = function() require('go').setup() end,
-  event = { 'CmdlineEnter' },
-  ft = { 'go', 'gomod' },
-  build = ':lua require("go.install").update_all_sync()',
+vim.pack.add {
+  'https://github.com/ray-x/guihua.lua',
+  'https://github.com/ray-x/go.nvim',
 }
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go', 'gomod' },
+  group = vim.api.nvim_create_augroup('custom-go-setup', { clear = true }),
+  once = true,
+  callback = function()
+    require('go').setup()
+  end,
+})

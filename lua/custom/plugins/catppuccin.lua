@@ -1,13 +1,10 @@
-return {
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-  config = function()
-    require('catppuccin').setup {
-      styles = {
-        comments = { 'italic' },
-      },
-    }
-    -- vim.cmd.colorscheme 'catppuccin-mocha'
-  end,
+vim.pack.add { { src = 'https://github.com/catppuccin/nvim', name = 'catppuccin' } }
+
+require('catppuccin').setup {
+  styles = {
+    comments = { 'italic' },
+  },
 }
+
+-- vim.cmd.colorscheme 'catppuccin-mocha'
+
