@@ -7,7 +7,20 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'go', 'gomod' },
   group = vim.api.nvim_create_augroup('custom-go-setup', { clear = true }),
   once = true,
-  callback = function()
-    require('go').setup()
-  end,
+  callback = function() require('go').setup() end,
 })
+
+vim.lsp.config('gopls', {
+  cmd = { vim.fn.exepath 'gopls' },
+  settings = {
+    gopls = {
+      gofumpt = true,
+      analyses = {
+        unusedparams = true,
+      },
+      completeUnimported = true,
+      usePlaceholders = true,
+    },
+  },
+})
+vim.lsp.enable 'gopls'

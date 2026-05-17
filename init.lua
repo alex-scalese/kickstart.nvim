@@ -738,7 +738,6 @@ do
   ---@type table<string, vim.lsp.Config>
   local servers = {
     -- clangd = {},
-    -- gopls = {},
     -- pyright = {},
     -- tsc = {},
     --
@@ -844,6 +843,7 @@ do
     },
     -- You can also specify external formatters in here.
     formatters_by_ft = {
+      go = { 'goimports', 'gofumpt' },
       -- rust = { 'rustfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
@@ -919,7 +919,7 @@ do
     },
 
     sources = {
-      default = { 'copilot', 'lsp', 'path', 'snippets' },
+      default = {'copilot', 'lsp', 'path', 'snippets' },
       providers = {
         copilot = {
           name = 'copilot',
