@@ -14,12 +14,38 @@ vim.lsp.config('gopls', {
   cmd = { vim.fn.exepath 'gopls' },
   settings = {
     gopls = {
-      gofumpt = true,
-      analyses = {
-        unusedparams = true,
+      settings = {
+        gopls = {
+          analyses = {
+            unusedparams = true,
+            shadow = true,
+            unusedvariable = true,
+            useany = true,
+            nilness = true,
+            httpresponse = true,
+          },
+          codelenses = {
+            gc_details = true,
+            generate = true,
+            regenerate_cgo = true,
+            run_govulncheck = true,
+            test = true,
+            tidy = true,
+            upgrade_dependency = true,
+            vendor = true,
+          },
+          staticcheck = true,
+          semanticTokens = true,
+          gofumpt = true,
+          hints = {
+            assignVariableTypes = true,
+            compositeLiteralFields = true,
+            functionTypeParameters = true,
+            parameterNames = true,
+            rangeVariableTypes = true,
+          },
+        },
       },
-      completeUnimported = true,
-      usePlaceholders = true,
     },
   },
 })
