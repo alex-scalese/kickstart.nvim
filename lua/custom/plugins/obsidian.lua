@@ -12,8 +12,7 @@ require('obsidian').setup {
     },
   },
   completion = {
-    blink = true,
-    nvim_cmp = false,
+    lsp = true,
     min_chars = 2,
   },
   frontmatter = {
