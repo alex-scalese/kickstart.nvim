@@ -807,6 +807,8 @@ do
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
     -- You can add other tools here that you want Mason to install
+    'helm-ls',
+    'yaml-language-server',
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -915,11 +917,11 @@ do
     completion = {
       -- By default, you may press `<c-space>` to show the documentation.
       -- Optionally, set `auto_show = true` to show the documentation after a delay.
-      documentation = { auto_show = false, auto_show_delay_ms = 500 },
+      documentation = { auto_show = true, auto_show_delay_ms = 500 },
     },
 
     sources = {
-      default = {'copilot', 'lsp', 'path', 'snippets' },
+      default = { 'copilot', 'lsp', 'path', 'snippets' },
       providers = {
         copilot = {
           name = 'copilot',
@@ -956,6 +958,11 @@ do
   --
   --  See `:help nvim-treesitter-intro`
 
+  -- Avoid preview SDKs that cannot link Tree-sitter parsers on macOS. Respect
+  -- an explicitly configured SDKROOT and otherwise use the stable CLT SDK.
+  local stable_macos_sdk = '/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk'
+  if vim.fn.has 'mac' == 1 and not vim.env.SDKROOT and vim.uv.fs_stat(stable_macos_sdk) then vim.env.SDKROOT = stable_macos_sdk end
+
   -- NOTE: You can also specify a branch or a specific commit
   vim.pack.add { { src = gh 'nvim-treesitter/nvim-treesitter', version = 'main' } }
 
@@ -970,6 +977,7 @@ do
     'markdown',
     'markdown_inline',
     'query',
+    'regex',
     'vim',
     'vimdoc',
     -- go stuff
@@ -978,6 +986,7 @@ do
     'gosum',
     'gowork',
     -- other stuff
+    'helm',
     'yaml',
     'json',
     'dockerfile',

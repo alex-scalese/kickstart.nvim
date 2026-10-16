@@ -5,6 +5,10 @@
       "src": "https://github.com/L3MON4D3/LuaSnip",
       "version": "2.0.0 - 3.0.0"
     },
+    "SchemaStore.nvim": {
+      "rev": "7fca30f2890a6acf9d21d194876c6ac960d92070",
+      "src": "https://github.com/b0o/SchemaStore.nvim"
+    },
     "blink-copilot": {
       "rev": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39",
       "src": "https://github.com/fang2hou/blink-copilot"
@@ -42,6 +46,10 @@
       "rev": "0768d79bbebdb1a112a845f9cd6293bfbd544dab",
       "src": "https://github.com/ray-x/go.nvim"
     },
+    "grug-far.nvim": {
+      "rev": "11595bf747edc270bce2069d1020502ad4ae56cf",
+      "src": "https://github.com/MagicDuck/grug-far.nvim"
+    },
     "guess-indent.nvim": {
       "rev": "84a4987ff36798c2fc1169cbaff67960aed9776f",
       "src": "https://github.com/NMAC427/guess-indent.nvim"
@@ -49,6 +57,10 @@
     "guihua.lua": {
       "rev": "4c513d5dac550af77034cced421967b393261509",
       "src": "https://github.com/ray-x/guihua.lua"
+    },
+    "helm-ls.nvim": {
+      "rev": "20df43509b02a3ce3c6b3eee254d6e2bffa9a370",
+      "src": "https://github.com/qvalentin/helm-ls.nvim"
     },
     "indent-blankline.nvim": {
       "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
@@ -91,6 +103,10 @@
       "rev": "4dacd3f0185a2227bdf3b6c0975a8f0bf87cac9a",
       "src": "https://github.com/EdenEast/nightfox.nvim"
     },
+    "noice.nvim": {
+      "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
+      "src": "https://github.com/folke/noice.nvim"
+    },
     "nui.nvim": {
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",
       "src": "https://github.com/MunifTanjim/nui.nvim"
@@ -122,6 +138,10 @@
     "nvim-nio": {
       "rev": "edcc181a875301dd21840189aa2f2f9ad69fc172",
       "src": "https://github.com/nvim-neotest/nvim-nio"
+    },
+    "nvim-notify": {
+      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
+      "src": "https://github.com/rcarriga/nvim-notify"
     },
     "nvim-treesitter": {
       "rev": "a45a920ec04cda5624f6dea0ff6454c81c3ad2d5",
